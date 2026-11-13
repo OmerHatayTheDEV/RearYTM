@@ -21,9 +21,9 @@ object Sh {
 
     fun setup(): String = exec("""
         cur=$(settings get secure enabled_notification_listeners)
-        case "$cur" in *$COMP*) ;; *)
-          if [ -z "$cur" ] || [ "$cur" = null ]; then n=$COMP; else n="$cur:$COMP"; fi
-          settings put secure enabled_notification_listeners "$n";;
+        case "\$cur" in *$COMP*) ;; *)
+          if [ -z "\$cur" ] || [ "\$cur" = null ]; then n=$COMP; else n="\$cur:$COMP"; fi
+          settings put secure enabled_notification_listeners "\$n";;
         esac
         dumpsys deviceidle whitelist +com.example.rearytm
         cmd appops set com.example.rearytm RUN_IN_BACKGROUND allow
