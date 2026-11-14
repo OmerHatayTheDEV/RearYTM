@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'RearYTM2.zip'
+      - '.github/workflows/build-apk.yml'
 permissions:
   contents: read
 jobs:
